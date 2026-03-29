@@ -22,7 +22,7 @@ def max_subarray_sum(nums: list[int]) -> int:
     if not nums:
         return 0
 
-    nums = nums.copy()
+    nums = [v for v in nums if isinstance(v, int)]
     for i in range(1, len(nums)):
         nums[i] += nums[i - 1]
     
